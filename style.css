@@ -20,6 +20,9 @@ html, body{
     height: 100%;
     width: 45%;
     background-color: #333;
+    background-image: url(images/animal.jpg);
+    background-size: cover;
+    background-position: top;
 }
 #right{
     height: 100%;
@@ -37,11 +40,14 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: space-between ;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #585858;
     padding: 10px;
 }
+.song-card:hover{
+    background-color: #202020;
+}
 .song-card:nth-last-child(1){
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #585858;
 }
 .song-card .part-1{
     display: flex;
@@ -54,7 +60,32 @@ html, body{
     }
 .song-card h2{
     font-size: 22px;
+    font-weight: 600;
 }
 .song-card h6{
     font-size: 16px;
+}
+#player{
+    height: 15%;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+#player h3{
+    background-color: rgb(104, 101, 101);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+#player {
+    font-size: 24px;
+}
+#player h3:active{
+    scale: 0.9;
 }
