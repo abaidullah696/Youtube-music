@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: gilroy;
+    color: #fff;
 }
 html, body{
     height: 100%;
@@ -13,12 +14,47 @@ html, body{
     width: 100%;
     background-color: #111;
     display: flex;
+    padding: 5vw 10vw;
 }
 #left{
     height: 100%;
     width: 45%;
+    background-color: #333;
 }
 #right{
     height: 100%;
     width: 55%;
+    padding: 0 3vh;
+}
+#right,h3{
+    font-size: 50px;
+}
+#allsong{
+    height: 85%;
+    margin-top: 30px;
+}
+.song-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    border-top: 1px solid #fff;
+    padding: 10px;
+}
+.song-card:nth-last-child(1){
+    border-bottom: 1px solid #fff;
+}
+.song-card .part-1{
+    display: flex;
+    align-items: center;
+}
+.song-card img{
+     height: 55px;
+     width: 55px;
+    margin-right: 20px;
+    }
+.song-card h2{
+    font-size: 22px;
+}
+.song-card h6{
+    font-size: 16px;
 }
