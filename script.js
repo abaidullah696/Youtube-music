@@ -6,7 +6,8 @@ var arr = [
 ]
 var allSongs = document.querySelector("#allsong")
 var audio = new Audio;
-
+var selectedSong = 0;
+var poster = document.querySelector("#left")
 
   function showData() {
     var clutter = "";
@@ -20,15 +21,20 @@ var audio = new Audio;
                 </div>`
     })
    allSongs.innerHTML = clutter
+   audio.src = arr[selectedSong].url
+   poster.style.backgroundImage = `url(${arr[selectedSong].img})`  
+
   }
 
 
 function musicPlay() {
     allSongs.addEventListener("click", function (dets) {
-        audio.src = arr[dets.target.id].url
+        selectedSong = dets.target.id
+        showData()
         audio.play()
     })   
     }
+
 
   showData();
   musicPlay();
