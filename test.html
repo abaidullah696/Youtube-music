@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        #poster {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="poster"></div>
+    <audio id="audio" controls></audio>
+    <button onclick="changeSong()">Change Song</button>
+
+    <script>
+        var arr = [
+    { songName: "Jale 2", url: "./songs/Jale 2.mp3", img: "./images/jale.jpg" },
+    { songName: "Pehle Bhi main", url: "./songs/Pehle Bhi Main.mp3", img: "./images/animal.jpg" },
+    { songName: "Ram siya ram", url: "./songs/Ram Siya Ram.mp3", img: "./images/ram.jpg" },
+    { songName: "Arjan Valley", url: "./songs/Arjan Vailly Ne.mp3", img: "./images/animal.jpg" }
+]
+
+        let selectedSong = 0;
+
+        function changeSong() {
+            selectedSong = (selectedSong + 1) % arr.length;
+            const audio = document.getElementById('audio');
+            const poster = document.getElementById('poster');
+            audio.src = arr[selectedSong].url;
+            poster.style.backgroundImage = `url(${arr[selectedSong].img})`;
+            audio.play();
+        }
+
+        // Initialize with the first song
+        changeSong();
+    </script>
+</body>
+</html>
